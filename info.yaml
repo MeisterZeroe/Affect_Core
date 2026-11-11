@@ -49,3 +49,6 @@ pinout:
   uio[5]: "DEBUG[5]"
   uio[6]: "DEBUG[6]"
   uio[7]: "DEBUG[7]"
+
+# Do not change!
+yaml_version: 6
