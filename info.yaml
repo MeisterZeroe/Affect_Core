@@ -7,18 +7,19 @@ project:
   language:     "Verilog"
   clock_hz:     10000000
 
-  # How many tiles your design occupies
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"
 
-  # Top module name must start with "tt_um_"
+  # Your top module name must start with "tt_um_".
   top_module:  "tt_um_eci_affect_core"
 
-  # Source files live in ./src, one per line
+  # List your project's source files here. Source files must be in ./src
+  # and you must list each source file separately, one per line.
   source_files:
     - "project.v"
     - "affect_spi.v"
 
-# The pinout of your project. Do not delete or add any pins.
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
   ui[0]: "SPI_SCK"
@@ -33,22 +34,22 @@ pinout:
   # Outputs
   uo[0]: "SPI_MISO"
   uo[1]: "PWM_INTENSITY"
-  uo[2]: "MOOD[0]"
-  uo[3]: "MOOD[1]"
-  uo[4]: "MOOD[2]"
-  uo[5]: "MOOD[3]"
+  uo[2]: "MOOD_0"
+  uo[3]: "MOOD_1"
+  uo[4]: "MOOD_2"
+  uo[5]: "MOOD_3"
   uo[6]: "MOOD_IRQ"
   uo[7]: "HEARTBEAT"
 
   # Bidirectional pins
-  uio[0]: "DEBUG[0]"
-  uio[1]: "DEBUG[1]"
-  uio[2]: "DEBUG[2]"
-  uio[3]: "DEBUG[3]"
-  uio[4]: "DEBUG[4]"
-  uio[5]: "DEBUG[5]"
-  uio[6]: "DEBUG[6]"
-  uio[7]: "DEBUG[7]"
+  uio[0]: "DEBUG_0"
+  uio[1]: "DEBUG_1"
+  uio[2]: "DEBUG_2"
+  uio[3]: "DEBUG_3"
+  uio[4]: "DEBUG_4"
+  uio[5]: "DEBUG_5"
+  uio[6]: "DEBUG_6"
+  uio[7]: "DEBUG_7"
 
 # Do not change!
 yaml_version: 6
